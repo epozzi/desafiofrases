@@ -6,7 +6,6 @@ import br.com.epozzi.desafiofrases.repository.FraseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 
@@ -16,7 +15,7 @@ public class FraseService {
     @Autowired
     private FraseRepository fraseRepository;
 
-    public FraseDTO buscaFrase() {
+    public FraseDTO buscaFraseAleatoria() {
         long fraseCount = fraseRepository.count();
         Random random = new Random();
         int randomNumber = random.nextInt((int) fraseCount);
